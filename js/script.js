@@ -45,3 +45,9 @@ function searchMovie() {
 $('#search-button').on('click', function () {
     searchMovie()
 })
+
+$('#search-input').on('keyup', function (e) {
+    if (e.which === 13) {
+        searchMovie()
+    }
+})
