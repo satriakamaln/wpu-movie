@@ -24,7 +24,7 @@ function searchMovie() {
                                 <div class="card-body">
                                 <h5 class="card-title">`+ data.Title +`</h5>
                                 <p class="card-text">`+ data.Year +`</p>
-                                <a href="#" class="card-link">See Details</a>
+                                <a href="#" class="card-link see-detail" data-toggle="modal" data-target="#exampleModal" data-id="`+ data.imdbID +`">See Details</a>
                                 </div>
                             </div>
                         </div>
@@ -50,4 +50,8 @@ $('#search-input').on('keyup', function (e) {
     if (e.which === 13) {
         searchMovie()
     }
+})
+
+$('.see-detail').on('click', function () {
+    console.log($(this).data('id'))
 })
